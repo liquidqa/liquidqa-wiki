@@ -44,9 +44,9 @@ header p { margin-top: 5px; }
 
 /* Sidebar */
 aside.sidebar {
-  width: 260px;
+  width: 300px;
   background: #fff;
-  padding: 20px;
+  padding: 15px;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   overflow-y: auto;
@@ -66,6 +66,14 @@ aside.sidebar .wiki-tab h2 {
   font-size: 1.15em;
   margin-bottom: 8px;
 }
+
+/* Sidebar tweaks */
+aside.sidebar ul {
+  list-style: none; /* махаме точки */
+  padding: 0;
+  margin: 0;
+}
+/*-----------------*/
 
 #content {
   flex: 1;

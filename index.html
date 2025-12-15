@@ -9,7 +9,8 @@
 </head>
 <body>
 
-<script>
+<script>  
+  /*  password popup - working logic */
   const PASSWORD = "password"; 
   if (!localStorage.getItem("authorized")) {
     const input = prompt("Enter wiki password:");
@@ -19,6 +20,21 @@
       alert("Wrong password!");
       window.location.href = "https://liquidqa.com";
     }
+  }
+    /*  rendereer ?? */
+    function loadPage(path) {
+    fetch(path)
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to fetch');
+        return res.text();
+      })
+      .then(md => {
+        document.getElementById('content').innerHTML = marked.parse(md);
+        window.scrollTo(0, 0);
+      })
+      .catch(() => {
+        document.getElementById('content').innerHTML = '<p>❌ Failed to load page.</p>';
+      });
   }
 </script>
 
@@ -43,4 +59,20 @@
         <li><a href="presentations/SQLite_Presentation.pptx" download>SQLite Presentation (PPTX)</a></li>
       </ul>
     </section>
-  </asi
+  </aside>
+
+  <!-- Content Area -->
+  <div id="content">
+    <h2>Welcome 👋</h2>
+    <p>Select a page from the sidebar to view content here.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="container" style="text-align:center; padding:10px; background:#eee;">
+    <p>© 2025 LiquidQA</p>
+  </div>
+</footer>
+
+</body>
+</html>
