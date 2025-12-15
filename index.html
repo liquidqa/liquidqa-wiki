@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LiquidQA Wiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+  // Minimal client-side password protection
+  const PASSWORD = "mypassword"; // смени на твоя
+  if (!localStorage.getItem("authorized")) {
+    const input = prompt("Enter wiki password:");
+    if (input === PASSWORD) {
+      localStorage.setItem("authorized", true);
+    } else {
+      alert("Wrong password!");
+      window.location.href = "https://liquidqa.com"; // fallback
+    }
+  }
+</script>
+
+<header>
+  <div class="container">
+    <h1>💧 LiquidQA Wiki</h1>
+    <p>Private knowledge base for Stoyan — Test Automation & QA</p>
+  </div>
+</header>
+
+<main class="container">
+  <section>
+    <h2>📝 Notes</h2>
+    <ul>
+      <li><a href="notes/playwright.html">Playwright</a></li>
+      <li><a href="notes/typescript.html">TypeScript</a></li>
+      <li><a href="notes/pom.html">Page Object Model</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>📂 Structure</h2>
+    <pre>
+liquidqa-wiki/
+│
+├─ index.html
+├─ notes/
+│   ├─ playwright.html
+│   ├─ typescript.html
+│   └─ pom.html
+└─ style.css
+    </pre>
+  </section>
+
+  <section>
+    <h2>🔗 Links</h2>
+    <p><a href="https://liquidqa.com">Main site</a></p>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2025 LiquidQA — Private Wiki</p>
+  </div>
+</footer>
+
+</body>
+</html>
