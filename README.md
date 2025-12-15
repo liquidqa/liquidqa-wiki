@@ -4,9 +4,13 @@
 wiki/   <-- repo 
 │
 ├─ index.html    <-- основна wiki страница
-├─ notes/        <-- MD файлове 
-│   ├─ playwright.md
-│   ├─ typescript.md
-│   └─ pom.md
-└─ style.css     <-- можеш да се използва същия стил като основния site
+├─ pages/        <-- MD файлове 
+│   ├─ BranchingStartegy.md
+│   ├─ How_to_setup_SSH_key.md
+│   .  
+│   .
+│   └─ MCP.md
+├─ slides/  
+│   └─ SQLite_Presentation.pptx
+└─ style.css     
 ```
