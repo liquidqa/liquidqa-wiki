@@ -5,15 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LiquidQA Wiki</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- Markdown renderer -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
 
 <script>
-  // Minimal client-side password protection
-  const PASSWORD = "password"; // <-- смени си я
+  const PASSWORD = "password"; 
   if (!localStorage.getItem("authorized")) {
     const input = prompt("Enter wiki password:");
     if (input === PASSWORD) {
@@ -25,79 +22,25 @@
   }
 </script>
 
-<div class="wrapper">
 <header>
   <h1>💧 LiquidQA Wiki</h1>
   <p>Knowledge base</p>
 </header>
 
-<div class="main-content">
+<div class="wrapper">
   <!-- Sidebar -->
   <aside class="sidebar">
-    <section>
+    <section class="wiki-tab">
       <h2>📄 Pages</h2>
       <ul>
-        <li>
-          <a onclick="loadPage('pages/How_to_setup_SSH_key.md')">
-            How to setup SSH key
-          </a>
-        </li>
+        <li><a onclick="loadPage('pages/How_to_setup_SSH_key.md')">How to setup SSH key</a></li>
       </ul>
     </section>
 
-    <section>
+    <section class="wiki-tab">
       <h2>📊 Presentations</h2>
       <ul>
-        <li>
-          <a href="presentations/SQLite_Presentation.pptx" download>
-            SQLite Presentation (PPTX)
-          </a>
-        </li>
+        <li><a href="presentations/SQLite_Presentation.pptx" download>SQLite Presentation (PPTX)</a></li>
       </ul>
     </section>
-
-    <section class="structure">
-      <h2>📂 Structure</h2>
-      <pre>
-liquidqa-wiki/
-├─ index.html
-├─ style.css
-├─ pages/
-│  └─ How_to_setup_SSH_key.md
-└─ presentations/
-   └─ SQLite_Presentation.pptx
-      </pre>
-    </section>
-  </aside>
-
-  <!-- Content Area -->
-  <div id="content">
-    <h2>Welcome 👋</h2>
-    <p>Select a page from the sidebar to view content full-screen.</p>
-  </div>
-</div>
-</div>
-
-<footer>
-  <div class="footer">
-    <p>© 2025 LiquidQA</p>
-  </div>
-</footer>
-
-<script>
-  function loadPage(path) {
-    fetch(path)
-      .then(res => res.text())
-      .then(md => {
-        document.getElementById('content').innerHTML = marked.parse(md);
-        window.scrollTo(0, 0);
-      })
-      .catch(() => {
-        document.getElementById('content').innerHTML =
-          '<p>❌ Failed to load page.</p>';
-      });
-  }
-</script>
-
-</body>
-</html>
+  </asi

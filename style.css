@@ -1,144 +1,42 @@
-/* Reset / basic */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-  background-color: #f9f9f9;
-  color: #222;
-  line-height: 1.6;
-}
-
-a {
-  color: #0066cc;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Header */
-header {
-  background-color: #0d6efd;
-  color: white;
-  padding: 30px 20px;
-  text-align: center;
-  border-radius: 0 0 10px 10px;
-  margin-bottom: 30px;
-}
-
-header h1 {
-  font-size: 2.5em;
-}
-
-header p {
-  font-size: 1.1em;
-  margin-top: 10px;
-}
-
-/* Sections */
-section {
-  background: white;
-  padding: 20px 25px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-section h2 {
-  font-size: 1.5em;
-  margin-bottom: 15px;
-}
-
-section ul {
-  list-style: disc inside;
-}
-
-section ul li {
-  margin-bottom: 8px;
-}
-
-/* Pre blocks */
-pre {
-  background: #eee;
-  padding: 15px;
-  border-radius: 8px;
-  overflow-x: auto;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 15px 0;
-  margin-top: 30px;
-  font-size: 0.9em;
-  color: #555;
-}
-
-
-/* Reset / basic */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Reset / basics */
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
 }
 
 body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: #f9f9f9;
+  background: #f9f9f9;
   color: #222;
-  line-height: 1.6;
-  overflow: hidden;
 }
 
-a {
-  color: #0066cc;
-  cursor: pointer;
-  text-decoration: none;
+a { 
+  color: #0066cc; 
+  cursor: pointer; 
+  text-decoration: none; 
 }
 
-a:hover {
-  text-decoration: underline;
+a:hover { 
+  text-decoration: underline; 
 }
 
-/* Header */
 header {
   width: 100%;
-  background-color: #0d6efd;
-  color: white;
-  padding: 20px;
+  background: #0d6efd;
+  color: #fff;
   text-align: center;
+  padding: 20px;
 }
 
-header h1 {
-  margin-bottom: 5px;
-}
-
-header p {
-  margin-top: 5px;
-}
+header h1 { margin-bottom: 5px; }
+header p { margin-top: 5px; }
 
 /* Layout */
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.main-content {
   display: flex;
   flex: 1;
   overflow: hidden;
@@ -146,44 +44,46 @@ header p {
 
 /* Sidebar */
 aside.sidebar {
-  width: 250px;
-  background: #f0f0f0;
+  width: 260px;
+  background: #fff;
   padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   overflow-y: auto;
+  margin-right: 20px;
 }
 
-section h2 {
-  font-size: 1.2em;
-  margin-bottom: 10px;
+aside.sidebar .wiki-tab {
+  background: #fff; /* чисто бяло */
+  padding: 12px 10px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  /* махнати transform/hover анимации */
 }
 
-section ul {
-  list-style: disc inside;
-  margin-bottom: 15px;
-}
-
-section ul li {
+aside.sidebar .wiki-tab h2 {
+  font-size: 1.15em;
   margin-bottom: 8px;
 }
 
-/* Content Area */
 #content {
   flex: 1;
-  padding: 20px;
-  overflow-y: auto;
   background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  overflow-y: auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Pre blocks */
-pre {
-  background: #eee;
-  padding: 15px;
-  border-radius: 8px;
-  overflow-x: auto;
+pre { 
+  background: #eee; 
+  padding: 15px; 
+  border-radius: 8px; 
+  overflow-x: auto; 
 }
 
-/* Footer */
-.footer {
+footer {
   text-align: center;
   padding: 10px;
   background: #eee;
