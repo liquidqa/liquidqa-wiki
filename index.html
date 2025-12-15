@@ -21,7 +21,7 @@
       window.location.href = "https://liquidqa.com";
     }
   }
-    /*  rendereer ?? */
+    /*  rendereer  */
     function loadPage(path) {
     fetch(path)
       .then(res => {
@@ -36,6 +36,23 @@
         document.getElementById('content').innerHTML = '<p>❌ Failed to load page.</p>';
       });
   }
+  
+  /*  SLIDEs rendereer  */
+  function loadSlide() {
+  const iframe = document.createElement('iframe');
+  iframe.src = "https://docs.google.com/presentation/d/e/2PACX-1vRVohqMN_MGO43KL_DEMzZX5J7AdPdGGtlE93zlSsZLAJ4JmtZmqEKHxd6PPAQVqQ/pubembed?start=false&loop=false&delayms=3000";
+  iframe.width = "1280";
+  iframe.height = "749";
+  iframe.frameBorder = "0";
+  iframe.allowFullscreen = true;
+  iframe.mozAllowFullscreen = true;
+  iframe.webkitAllowFullscreen = true;
+
+  const contentDiv = document.getElementById('content');
+  contentDiv.innerHTML = ''; // clear previous content
+  contentDiv.appendChild(iframe);    
+  }
+
 </script>
 
 <header>
@@ -59,7 +76,8 @@
     <section class="wiki-tab">
       <h2>📊 Presentations</h2>
       <ul>
-        <li><a href="presentations/SQLite_Presentation.pptx" download>SQLite Presentation (PPTX)</a></li>
+        <!--  <li><a href="presentations/SQLite_Presentation.pptx" download>SQLite Presentation (PPTX)</a></li>  Долу е със зареждане -->
+        <li> <a onclick="loadSlide()"> SQLite Presentation </a></li>
       </ul>
     </section>
   </aside>
